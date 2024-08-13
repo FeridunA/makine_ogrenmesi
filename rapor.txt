@@ -1,0 +1,47 @@
+Proje Özeti
+Bu proje, orman örtüsü tiplerini sınıflandırmak amacıyla gerçekleştirilmiştir. UCI Machine Learning Repository'den elde edilen veri seti kullanılarak, çeşitli çevresel faktörlere dayalı olarak orman örtüsü tiplerinin tahmin edilmesi hedeflenmiştir. Sınıflandırma modeli, Random Forest algoritması kullanılarak geliştirilmiştir.
+
+Veri Hazırlığı
+Veri seti, 581.012 örnekten oluşmaktadır ve her bir örnek, 54 çevresel özellik içerir. Hedef değişken, 1'den 7'ye kadar numaralandırılan farklı orman örtüsü tiplerini temsil etmektedir.
+
+Veri Hazırlık Aşamaları:
+
+Gereksiz özellikler veya eksik veriler olup olmadığı kontrol edilmiştir.
+Veri seti, eğitim ve test setlerine ayrılmıştır (%80 eğitim, %20 test).
+Modelleme Süreci
+Random Forest Classifier, sınıflandırma problemi için tercih edilmiştir. Bu algoritma, yüksek boyutlu verilerde etkili performans göstermesi ve aşırı uyum riskini azaltması nedeniyle seçilmiştir.
+
+Parametre Ayarlamaları:
+
+100 ağaçtan oluşan bir orman kullanılmıştır.
+Rastgele durum (random_state) kontrol edilmiştir, böylece sonuçlar tekrarlanabilir.
+Değerlendirme Sonuçları
+Başlıca Performans Metrikleri:
+
+Doğruluk: %95
+F1-Skoru: Farklı sınıflar için genellikle yüksek değerler elde edilmiştir.
+Karışıklık Matrisi:
+
+Çoğu sınıf doğru bir şekilde sınıflandırılmıştır, ancak bazı azınlık sınıflarında hata oranı artmıştır.
+Sınıflandırma Raporu:
+
+Çeşitli orman örtüsü türlerinin doğru tahmin edilme oranı farklılık göstermektedir. Büyük sınıflar daha iyi tahmin edilirken, küçük sınıflarda (ör. sınıf 4) hata oranı daha yüksektir.
+Potansiyel İyileştirmeler
+Daha Fazla Veri ve Özellik Mühendisliği: 
+
+Özellikle düşük performans gösteren sınıflar için daha fazla veri toplanabilir. İlave özelliklerin eklenmesi, modelin daha iyi genelleştirmesini sağlayabilir.
+Model Optimizasyonu:
+
+Hiperparametre optimizasyonu yapılabilir (ör. GridSearchCV kullanarak optimum parametreleri bulmak).
+Farklı algoritmalar (ör. XGBoost, LightGBM) denenebilir.
+Dengesiz Veri Seti Sorununu Giderme:
+
+Sınıf dengesizliği sorununu gidermek için SMOTE veya veri ağırlıklandırma teknikleri kullanılabilir.
+Özellik Seçimi:
+
+En önemli özellikler belirlenerek model karmaşıklığı azaltılabilir ve hızlandırılabilir.
+Sonuçlar
+Orman örtüsü tiplerinin tahmini için oluşturulan model, yüksek doğruluk oranıyla etkileyici bir performans sergilemiştir. Ancak, belirli iyileştirmeler yapılarak daha iyi bir genelleme kapasitesi elde edilebilir ve özellikle az bulunan örtü tiplerinin sınıflandırılmasındaki doğruluk artırılabilir.
+
+Bu bulgular, gelecekteki çalışmalar için bir temel oluşturmakla birlikte, ek araştırmaların da kapısını aralamaktadır.
+
